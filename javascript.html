@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div  class="content">
+        MY text 1
+    </div>
+    <div  class="content">
+        MY text 2 
+    </div>
+    <div  class="content">
+        MY text3 
+    </div>
+    <div  class="content">
+        MY text4
+    </div>
+    <div  class="content">
+        MY text 5
+    </div>
+    <button onclick="addClass()"> Add</button>
+    <button onclick="removeClass()">remove</button>
+    <button onclick="toggleClass()">toggle</button>
+
+<!-- js code inside of script -->
+    <script>
+        function toggleClass () {
+            console.log("toggleClass")
+            // document.getElementById('content').classList.toggle('bg-red')
+            contentArr = document.querySelectorAll('.content')
+            contentArr.forEach(element => {
+                element.classList.toggle('bg-green')
+            });
+
+            
+        }
+        function addClass () {
+            console.log("addClass")
+            document.getElementById('content').classList.add('bg-red')
+        }
+        const removeClass = () => {
+            console.log("removeClass")
+            document.getElementById('content').classList.remove('bg-red')
+
+        }
+    </script>
+
+    <!-- <script src="js/index.js"></script> -->
+</body>
+</html>
